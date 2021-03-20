@@ -137,7 +137,7 @@ span.mapa a {
     transition: color 200ms; /* 200ms ou 0.2s */
 }
 span.mapa a:hover {
-    color: red;
+    color: #f00;
 }
 /* Footer - Rodapé */
 footer {
