@@ -1,0 +1,55 @@
+/* RESET DO CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form {
+    width: 90%;
+    max-width: 400px;
+
+    background-color: #e1e1e1;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.container form .input-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container form .input-block label {
+    margin-bottom: 8px;
+}
+
+.container form .input-block input {
+   padding: 8px 12px;
+   color: #333;
+   border: 1px solid #aaa;
+}
+
+.container form input[type='submit'] {
+    background-color: #333;
+    color: white;
+
+    padding: 8px 12px;
+    border: 0;
+}
