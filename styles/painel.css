@@ -30,6 +30,7 @@ body {
 }
 
 .container form .input-block {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,10 +41,17 @@ body {
     margin-bottom: 8px;
 }
 
-.container form .input-block input {
+.container form .input-block input,
+.container form .input-block textarea {
    padding: 8px 12px;
    color: #333;
    border: 1px solid #aaa;
+}
+
+.container form .input-block textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
 }
 
 .container form input[type='submit'] {

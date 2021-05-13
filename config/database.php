@@ -78,3 +78,23 @@
 
         return DBExecute($query, $insertId);
     }
+    
+    // Altera Registros
+    function DBUpdate($table, array $data, $where = null, $insertId = false) {
+        foreach ($data as $key => $value){
+			$fields[] = "{$key} = '{$value}'";
+		}
+
+        $fields = implode(', ', $fields);
+        $where = ($where) ? " WHERE {$where}" : null;
+        $query = "UPDATE {$table} SET {$fields}{$where}";
+        return DBExecute($query, $insertId);
+    }
+
+    // Deleta Registros
+    function DBDelete($table, $where = null) {
+        $where = ($where) ? " WHERE {$where}" : null;
+
+        $query = "DELETE FROM {$table}{$where}";
+        return DBExecute($query);
+    }
