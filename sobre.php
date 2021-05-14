@@ -1,6 +1,6 @@
-<?php 
-    require_once 'config/config.php';
-    require_once 'config/database.php';
+<?php
+require_once "config/config.php";
+require_once "config/database.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Chango&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>

@@ -1,6 +1,6 @@
-<?php 
-    require_once 'config/config.php';
-    require_once 'config/database.php';
+<?php
+require_once "config/config.php";
+require_once "config/database.php";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Chango&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
@@ -42,38 +42,43 @@
 
                 <div class="content">
                     <?php
-                        $posts = DBRead('postagens', "ORDER BY data DESC LIMIT 3");
+                    $posts = DBRead("postagens", "ORDER BY data DESC LIMIT 3");
 
-                        if (!$posts)
-                            echo '<h2>Nenhuma notícia encontrada!</h2>';
-                        else
-                            foreach ($posts as $post): 
-                    ?>
+                    if (!$posts) {
+                      echo "<h2>Nenhuma notícia encontrada!</h2>";
+                    } else {
+                      foreach ($posts as $post): ?>
 
                     <article>
                         <h2>
-                            <a href="single.php?id=<?php echo $post['id']; ?>"><?php echo $post['titulo']; ?></a>
+                            <a href="single.php?id=<?php echo $post[
+                              "id"
+                            ]; ?>"><?php echo $post["titulo"]; ?></a>
                         </h2>
                         <div class="info">
-                            <span>Author: <?php echo $post['autor']; ?></span>
-                            <span>publicado <em></em>: <?php echo date('d/m/Y', strtotime($post['data'])); ?></span>
+                            <span>Author: <?php echo $post["autor"]; ?></span>
+                            <span>publicado em: <?php echo date(
+                              "d/m/Y",
+                              strtotime($post["data"])
+                            ); ?></span>
                         </div>
                         <p>
-                            <?php 
-                                $str = strip_tags($post['conteudo']);
-                                $len = strlen($str);
-                                $max = 200;
+                            <?php
+                            $str = strip_tags($post["conteudo"]);
+                            $len = strlen($str);
+                            $max = 200;
 
-                                if ($len <= $max)
-                                    echo $str;
-                                else
-                                    echo substr($str, 0, $max) . '...';
+                            if ($len <= $max) {
+                              echo $str;
+                            } else {
+                              echo substr($str, 0, $max) . "...";
+                            }
                             ?>
                         </p>
                     </article>
 
-                    <?php
-                        endforeach;
+                    <?php endforeach;;
+                    }
                     ?>
                 </div>
             </section>

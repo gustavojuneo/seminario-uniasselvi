@@ -9,7 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Chango&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
@@ -37,7 +37,8 @@
 
                 <div class="content">
                     <div class="covid-map">
-                    <iframe src="https://public.domo.com/cards/bWxVg" width="100%" height="600px" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+                      <iframe src="https://covid19br.wcota.me/map/index.htm" width="100%" height="600px" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+                      <span class="covid-fonte">Fonte: <a href="https://covid19br.wcota.me/" target="_blank">https://covid19br.wcota.me/</a></span>
                     </div>
                 </div>
             </section>
