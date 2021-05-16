@@ -200,3 +200,8 @@ footer {
   background: var(--red);
   color: #fff;
 }
+
+div
+  > a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+  display: none;
+}
